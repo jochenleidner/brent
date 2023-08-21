@@ -1,0 +1,19 @@
+.
+├── bin
+│   └── brent*
+├── lib
+│   ├── corpus
+│   ├── corpus.t*
+│   └── verb-valency-lexicon.lex*
+├── man
+│   └── man1
+│       └── brent.1
+├── README.md
+├── src
+│   ├── cue.y
+│   ├── y.tab.h*
+│   ├── y.tab.c*
+│   └── Makefile
+└── TREE
+
+*: generated
