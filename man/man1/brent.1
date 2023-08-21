@@ -1,0 +1,84 @@
+.de Vb
+.ft CW
+.nf
+.ne \\$1
+..
+.TH brent 1  "1998-04-21"
+.ds )H CLUE, University of Erlangen
+.SH NAME
+brent \- Brent style valency list extractor for English
+.SH SYNOPSIS
+.CR brent
+.RC [file]
+.SH DESCRIPTION
+.B Brent
+is an automatic tool to extract valency lists
+in feature structure format from tokenized English text files.
+.CR Brent
+reads a text file (default is
+.BI corpus
+in current directory), creating an auxiliary file
+with a crude annotation with extension 
+.BI .t
+The resulting dictionary is written to
+.BI stdout
+.
+systems, e.g. Malaga).
+.PP
+.Vb 11
+\&
+\&      ...
+\&      I
+\&      do
+\&      not
+\&      believe
+\&      that
+\&      I
+\&      could
+\&      have
+\&      fixed
+\&      ...
+\&
+\&       |
+\&       |
+\&       V
+\&
+\&      [ Lemma: "doubt", Valencies: <<Clause>> ];
+\&      [ Lemma: "display", Valencies: <<NounPhrase_Obj>> ];
+.Ve
+
+It is an implementation of the rules-base method akin to that described in 
+Brent (1993), version without statistic filtering.
+Originally implemented on the author's Atari ST 520+ using Berkeley YACC
+then compiled on a HP9000 715/75 under HP-UX 9.03.
+
+.SH EXAMPLES
+.LP
+.nf
+.ft B
+ brent > corpus.lex
+
+ brent test | more
+.ft R
+.fi
+.SH REFERENCES
+Brent, Michael R. (1993)
+From Grammar to Lexicon:
+Unsupervised Learning of Lexical Syntax.
+.I Computational Linguistics
+19(2), 244-262.
+
+Leidner, Jochen L. (1998):
+.I Linksassoziative Morphologische Analyse des Englischen
+.I mit Stochastischer Disambiguierung.
+Master's thesis.
+Department of Computational Linguistics, University of Erlangen.
+
+Beutel, Bj<F6>rn (1998):
+.I Malaga 4.0.
+(Unpublished documentation.)
+[Online.] <http://www.linguistik.uni-erlangen.de/Malaga.html>
+.SH BUGS
+None known.
+.SH AUTHOR
+Jochen L. Leidner <leidner@acm.org>
